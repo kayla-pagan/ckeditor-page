@@ -1,233 +1,42 @@
-body {
-    margin: 0;
-    background-color: #e3f2fd;
-    font-family: 'Roboto Slab', serif;
+*, 
+*:before, 
+*:after {
+    box-sizing: border-box;
 }
 
-.flex {
-    display: flex;
+.header-sub .top-menu-cke-logo a {
+    background-image: url("./imgs/cke-logo.svg");
+    background-repeat: no-repeat;
+    background-size: 38px;
+    background-position: 1em 5px;
+    border-bottom: 0;
+    padding-left: 65px;
 }
 
-.align-center {
-    align-items: center;
-}
-
-.logo-and-title {
-    gap: 2px;
-}
-
-header img {
-    width: 60px;
-    height: 60px;
-}
-
-h1 {
-    color: #90caf9;
-    font-weight: 200;
-}
-
-span {
+.header-sub a {
     display: block;
-    font-size: 18px;
-    font-style: italic;
-}
-
-.search-label, .inbox-history {
-    margin: 0px auto;
-}
-
-.search-label {
+    font-weight: 600;
+    text-decoration: none;
+    color: #555;
+    border-bottom: 2px solid transparent;
     position: relative;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 1em;
 }
 
-#search, 
-h2, 
-.skills-list li, 
-.inbox-history, 
-.search-label input,
-.contact-info,
-.contact-info li {
-    border-radius: 10px;
+.header-sub a:hover, .header-sub a:active {
+    border-color: #3e59ad;
 }
 
-.search-label input {
-    width: 600px;
-    height: 50px;
-    padding: 0px 40px;
-    border: none;
-    background-color: #979dac30;
-    outline: none;
-    font-family: 'Roboto Slab', serif;
-    font-size: 16px;
-    color: #33415c;
+.header-sub a:hover {
+    background-color: #eee;
 }
 
-.search-label svg {
-    position: absolute;
-    left: 0px;
-    padding: 10px 12px;
-    pointer-events: none;
-    top: 0.3rem;
-    width: 20px;
-    height: 20px;
-    color: #979dac;
+li .top-menu-github-link:hover {
+    border-color: transparent;
 }
 
-.main-area {
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-top: 30px;
-}
-
-.skills-container {
-    flex-direction: column;
-}
-
-h2 {
-    background-color: #979dac30;
-    color: #33415c;
-    padding: 20px 30px;
-    max-width: 100px;
-    margin: 0px 5px;
-    font-size: 20px;
-    font-weight: 200;
-    text-align: center;
-}
-
-h2:hover {
-    box-shadow: 0 0 3px #33415c;
-}
-
-.skills-list, .contact-info {
-    list-style: none;
-    font-size: 15px;
-    margin-top: 0px;
-    padding: 5px;
-}
-
-.contact-info a {
-    text-decoration: overline dotted;
-    color: #33415c;
-}
-
-.skills-list li {
-    margin: 5px 0px;
-    background-color: #0353a450;
-    padding: 5px 50px;
-    color: #33415c;
-}
-
-.logo-and-title,
-.skills-list li:hover, 
-input[type="checkbox"], 
-.icons-container svg:hover, 
-.degree-and-certs:hover {
-    cursor: pointer;
-}
-
-.skills-list li:hover {
-    background-color: #979dac30;
-}
-
-.contact-info li {
-    background-color: #979dac30;
-    color: #33415c;
-    margin: 5px 0px;
-    padding: 5px 20px;
-    font-size: 12px;
-}
-
-.contact-info li:hover {
-    background-color: #0353a450;
-}
-
-.inbox-history {
-    width: 900px;
-    height: auto;
-    background-color: #33415c99;
-}
-
-.icons-container {
-    padding: 20px 10px;
-    gap: 20px;
-}
-
-.top-of-inbox {
-    justify-content: space-between;
-}
-
-.top-of-inbox-icons {
-    width: 18px;
-    height: 18px;
-    color: white;
-}
-
-h4 {
-    color: white;
-    font-size: 15px;
-    font-weight: 200;
-    padding-right: 10px;
-}
-
-.icons-container svg:hover {
-    background-color: #33415c10;
-    border-radius: 50%;
-    padding: 2px;
-}
-
-input[type="checkbox"] {
-    accent-color: #0353a410;
-}
-
-.inbox-title input {
-    width: 15px;
-    height: 15px;
-}
-
-.inbox-item {
-    color: white;
-    border-top: 1px solid #FFFFFF40;
-    border-bottom: 1px solid #FFFFFF40;
-    padding: 10px 10px;
-    font-size: 15px;
-}
-
-.inbox-item label {
-    display: inline;
-}
-
-.bg-lightgrey {
-    background-color: #979dac;
-}
-
-.degrees-and-certs-title {
-    text-align: center;
-    font-size: 20px;
-    margin: 5px 0px;
-}
-
-.degrees-and-certs-container {
-    justify-content: center;
-    gap: 20px;
-    padding: 15px 0px;
-    text-align: center;
-    font-size: 16px;
-    color: #33415c;
-}
-
-.degree-and-certs {
-    width: 300px;
-    background-color: #90caf990;
-    border: 1px solid #FFFFFF40;
-    border-radius: 5px;
-    height: 60px;
-}
-
-.degree-and-certs:hover {
-    background-color: #90caf9;
-}
-
-.highlight, mark {
-    background-color: #90caf980;
-    border-radius: 2px;
+.header-sub li {
+    margin-right: 1em;
 }
