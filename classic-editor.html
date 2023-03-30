@@ -20,7 +20,7 @@
                     <div class="header-main d-flex justify-content-between align-items-center position-relative px-3 py-2">
                         <a class="text-decoration-none text-white py-1" style="font-size: 1.5em;" href="https://ckeditor.com/docs/index.html" target="_blank">CKEditor Ecosystem Documentation</a>
                         <div class="top-search position-relative" style="flex: 0 0 240px;">
-                            <input class="top-search-box position-relative bg-white fw-light rounded-pill" style="width: 240px; height: 40px; font-size: 1rem; padding: 0 3em 0 1.5em; border: 2px solid transparent;" type="text" placeholder="Search in CKEditor 5" autocomplete="off" spellcheck="false" aria-autocomplete="list" role="combobox" aria-expanded="false" aria-label="search input" dir="auto">
+                            <input id="docsearch_input" class="top-search-box position-relative bg-white fw-light rounded-pill" style="width: 240px; height: 40px; font-size: 1rem; padding: 0 3em 0 1.5em; border: 2px solid transparent;" type="text" placeholder="Search in CKEditor 5" autocomplete="off" spellcheck="false" aria-autocomplete="list" role="combobox" aria-expanded="false" aria-label="search input" dir="auto">
                             <div class="top-search-btn text-black-50 top-50 position-absolute translate-middle-y border-0 p-0" style="width: 15px; height: 17px; right: 1.5em; background: none;">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                                     <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd" />
@@ -33,25 +33,25 @@
                     <div class="header-sub d-flex bg-secondary-subtle position-relative" style="height: 45px;">
                         <ul class="d-flex m-0 p-0" style="list-style: none;">
                             <li class="top-menu-cke-logo">
-                                <a class="" href="https://ckeditor.com/docs/ckeditor5/latest/index.html" target="_blank">CKEditor 5</a>
+                                <a href="https://ckeditor.com/docs/ckeditor5/latest/index.html" target="_blank">CKEditor 5</a>
                             </li>
                             <li>
-                                <a class="blue-border" href="#">Getting Started</a>
+                                <a href="#">Getting Started</a>
                             </li>
                             <li>
-                                <a class="blue-border" href="#">Features</a>
+                                <a href="#">Features</a>
                             </li>
                             <li>
-                                <a class="blue-border" href="#">Examples</a>
+                                <a href="#">Examples</a>
                             </li>
                             <li>
-                                <a class="blue-border" href="#">Updating</a>
+                                <a href="#">Updating</a>
                             </li>
                             <li>
-                                <a class="blue-border" href="#">Support</a>
+                                <a href="#">Support</a>
                             </li>
                             <li>
-                                <a class="blue-border" href="#">Framework</a>
+                                <a href="#">Framework</a>
                             </li>
                             <li>
                                 <a href="#">API</a>
@@ -108,7 +108,7 @@
                     <h2 class="fw-light">The three greatest things you learn from traveling</h2>
                     <p>Like all the great things on earth traveling teaches us by example. 
                     Here are some of the most precious lessons I’ve learned over the years of traveling.</p>
-                    <figure class="image" style="max-width: 50%;">
+                    <figure class="image">
                         <img src="./imgs/volcano-img.jpg" alt="A lone wanderer looking at Mount Bromo volcano in Indonesia.">
                         <figcaption>Leaving your comfort zone might lead you to such beautiful sceneries like this one.</figcaption>
                         <div></div>
@@ -158,8 +158,8 @@
             </div>
 
 
-            <div class="side-navigation mt-4" style="flex: 0 0 340px;">
-               <div class="side-navigation-container d-flex position-fixed bg-white" style="height: calc(100% - 115px);">
+            <div class="side-navigation mt-2" style="flex: 0 0 340px;">
+               <div class="side-navigation-container d-flex position-fixed bg- pt-2" style="height: calc(100% - 100px);">
                     <nav class="side-navigation-inner overflow-y-auto overflow-x-hidden" style="width: 340px; border-right: 1px solid #f2f5f7;">
                         <ul class="tree guide-tree user-select-none list-unstyled ms-1 pb-3">
                             <li>
@@ -366,7 +366,42 @@
                  All rights reserved.
             </p>
         </footer>
+
+        <div class="search-bar-nav-container position-fixed vh-100 border border-1 border-black d-none" style="width: 63%; right: 0.8em; top: 0.8em; z-index: 3; top: 3.4em;">
+            <nav class="search-bar-nav-inner bg-white">
+                <ul class="list-unstyled">
+                    <li>
+                        <h1>
+                            Examples
+                        </h1>
+                        <div>
+                            <ul>
+                                <li></li>
+                            </ul>
+                            <ul></ul>
+                        </div>
+                    </li>
+                    <li>
+                        <h1>Getting started</h1>
+                    </li>
+                    <li>
+                        <h1>Features</h1>
+                    </li>
+                    <li>
+                        <h1>Support</h1>
+                    </li>
+                    <li>
+                        <h1>Framework</h1>
+                    </li>
+                    <li>
+                        <h1>API</h1>
+                    </li>
+                </ul>
+            </nav>
+        </div>
         <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
         <script src="index.js"></script>
     </body>
 </html>

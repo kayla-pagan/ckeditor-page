@@ -47,7 +47,7 @@ a {
 }
 
 p {
-    font-size: 1em;
+    font-size: 0.9em;
     line-height: 1.5em;
     padding-top: 0.2em;
     margin-bottom: 0.8em;
@@ -66,7 +66,7 @@ h2 {
 h3 {
     font-size: 1.36em;
     line-height: 1.5em;
-    padding-top: 0.8em;
+    padding-top: 1em;
     margin-bottom: 0.2em;
     font-weight: 400;
 }
@@ -83,6 +83,26 @@ ul {
     border-bottom: 0;
     padding-left: 65px;
 }
+
+.search-container {
+    position: absolute;
+    top: 65px;
+    right: 60px;
+  }
+  
+  #docsearch_input {
+    border-radius: 6px;
+    min-width: 180px;
+    padding: 6px 25px 6px 6px;
+    font-size: 14px;
+    /* background( #fff image-url("icon-search.svg") no-repeat 100% 50%); */
+  }
+  
+  #docsearch_input:focus {
+    border: 2px solid #5db913;
+    outline: none;
+    box-shadow: 0 0 5px #5db913;
+  }
 
 .header-sub a {
     display: block;
@@ -218,6 +238,15 @@ li .top-menu-github-link:hover {
 
 .tree-item-wrapper:hover {
     text-decoration: underline;
+}
+
+.search-bar-nav-inner h1 {
+    background-color: #f2f5f7;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #555;
+    border-bottom: 1px solid black;
+    padding: 0.5em 0 0.5em 1em;
 }
 
 summary {
