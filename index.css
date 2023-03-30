@@ -4,15 +4,11 @@
     box-sizing: border-box;
 }
 
-article, 
-aside, 
 details, 
 figcaption, 
 figure, 
 footer, 
 header, 
-hgroup, 
-menu, 
 nav, 
 section {
     display: block;
@@ -22,24 +18,11 @@ h1,
 h2, 
 h3, 
 h4, 
-h5, 
-h6, 
 p, 
 blockquote, 
 pre, 
 a, 
-abbr, 
-acronym, 
-address, 
-big, 
-cite, 
-code, 
-del, 
-dfn, 
-em, 
-img, 
-ins, 
-kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+img {
     margin: 0;
     padding: 0;
     border: 0;
@@ -48,9 +31,12 @@ kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, 
     vertical-align: baseline;
 }
 
-.live-snippet p, blockquote, pre {
+.live-snippet p, 
+blockquote, 
+pre, 
+ul {
     font-size: 1em;
-    line-height: 1.6em;
+    line-height: 1.5em;
     padding-top: 0.2em;
     margin-bottom: 0.8em;
 }
@@ -62,14 +48,14 @@ a {
 
 p {
     font-size: 1em;
-    line-height: 1.6em;
+    line-height: 1.5em;
     padding-top: 0.2em;
     margin-bottom: 0.8em;
 }
 
 h2 {
-    font-size: 1.68em;
-    line-height: 1.68em;
+    font-size: 1.5em;
+    line-height: 1.5em;
     padding-top: 0.8em;
     margin-bottom: 0.4em;
     padding-bottom: 0.2em;
@@ -83,6 +69,10 @@ h3 {
     padding-top: 0.8em;
     margin-bottom: 0.2em;
     font-weight: 400;
+}
+
+ul {
+    padding-left: 1em;
 }
 
 .header-sub .top-menu-cke-logo a {
@@ -145,7 +135,7 @@ li .top-menu-github-link:hover {
     margin-top: 0;
     margin-left: 1.5em;
     clear: both; 
-    margin: 1em auto; 
+    margin: 1em; 
     min-width: 50px; 
     max-width: 50%; 
     border: 2px solid #f7f7f7; 
@@ -180,9 +170,9 @@ li .top-menu-github-link:hover {
     display: block;
 }
 
-.tree-item-nested-list span {
+.tree-item-wrapper span {
     display: inline-block;
-    padding: 0.25em 0;
+    padding: 0.3em 0;
     position: relative;
     margin-right: auto;
     white-space: nowrap;
@@ -192,14 +182,19 @@ li .top-menu-github-link:hover {
     margin-bottom: 0;
 }
 
-.tree-item-wrapper span::before {
-    background-image: url(./imgs/book-icon.svg);
+.d-none {
+    display: none;
+} 
+
+.tree {
+    font-size: 0.9em;
+    font-family: inherit;
+}
+
+.tree li {
     position: relative;
-    width: 13px;
-    height: 13px;
-    display: inline-block;
-    margin-right: 0.5em;
-    background-repeat: no-repeat;
+    cursor: pointer;
+    display: block;
 }
 
 .tree li a {
@@ -213,19 +208,47 @@ li .top-menu-github-link:hover {
     justify-content: flex-start;
     align-items: center;
     flex-wrap: nowrap;
-    margin-left: calc( -1 * 1.5em );
+    margin-left: 1em;
 }
 
-.tree-item-wrapper:active {
+.tree-item-wrapper:hover, .tree-item-wrapper:active {
     overflow: hidden;
     background-color: #f2f5f7;
 }
+
+.tree-item-wrapper:hover {
+    text-decoration: underline;
+}
+
+summary {
+    padding-bottom: 10px;
+}
+
+footer {
+    position: relative;
+    z-index: 30;
+    font-size: 0.7rem;
+    width: 340px;
+    height: 50px;
+    float: right;
+}
+
+footer p {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #333;
+    bottom: 1.333em;
+    right: 1.5em;
+}
+
+/* All media queries */
 
 
 
 @media only screen and (min-width: 960px) {
     .tree-item-nested-list span {
-        margin-left: 4.081em;
+        margin-left: 0.5em;
     }
 }
 
@@ -239,7 +262,7 @@ li .top-menu-github-link:hover {
 
     .main-content-inner {
         min-width: 910px;
-    }
+    }   
 }
 
 

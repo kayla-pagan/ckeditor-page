@@ -17,7 +17,7 @@
             <nav class="navbar position-fixed z-3 p-0" style="background: #3e59ad; top: 0; left: 0; right: 0;">
                 <div class="container-fluid d-block p-0">
 
-                    <div class="header-main d-flex justify-content-between align-items-center position-relative px-3 py-3">
+                    <div class="header-main d-flex justify-content-between align-items-center position-relative px-3 py-2">
                         <a class="text-decoration-none text-white py-1" style="font-size: 1.5em;" href="https://ckeditor.com/docs/index.html" target="_blank">CKEditor Ecosystem Documentation</a>
                         <div class="top-search position-relative" style="flex: 0 0 240px;">
                             <input class="top-search-box position-relative bg-white fw-light rounded-pill" style="width: 240px; height: 40px; font-size: 1rem; padding: 0 3em 0 1.5em; border: 2px solid transparent;" type="text" placeholder="Search in CKEditor 5" autocomplete="off" spellcheck="false" aria-autocomplete="list" role="combobox" aria-expanded="false" aria-label="search input" dir="auto">
@@ -75,7 +75,7 @@
         <main class="main d-flex justify-content-end flex-row-reverse flex-nowrap" 
         style="min-height: calc( 100vh - 100px ); background-attachment: scroll; background-clip: border-box;">
             <section class="main-content mw-100 bg-white position-relative"
-             style="min-width: 690px; flex: 1; padding: 3.5em 4em;">
+             style="min-width: 690px; flex: 1; padding: 3.5em 2em;">
                 <div class="main-content-inner position-relative px-0 mw-100" 
                 style="margin: 0 auto;">
                     <div class="github-contribution position-absolute" 
@@ -92,10 +92,10 @@
                         <span class="rwd-breadcrumbs-separator">/</span>
                         <a href="https://ckeditor.com/docs/ckeditor5/latest/examples/index.html" target="_blank">Examples</a>
                     </div>
-                    <h1 class="main-content-title d-inline-block mb-1">
+                    <h1 class="main-content-title d-inline-block mb-4 pt-2" style="font-size: 2.3em; line-height: 1.3em;">
                         <img class="position-relative me-2" style="height: 1.1em; vertical-align: middle; top: -0.1em;" 
                         src="./imgs/book-icon.svg" alt="guide">
-                        Classic Editor
+                        Classic editor
                     </h1>
                     <p>
                         <a href="https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/predefined-builds.html#classic-editor" target="_blank">Classic editor</a>
@@ -123,7 +123,7 @@
                     <h3>Improvisation</h3>
                     <p>Life doesn't allow us to execute every single plan perfectly. This especially seems to be the case when you travel. You plan it down to every minute with a big checklist; but when it comes to executing it, 
                     something always comes up and you’re left with your improvising skills. You learn to adapt as you go. Here’s how my travel checklist looks now:</p>
-                    <ul>
+                    <ul class="ps-4" style="list-style: disc;">
                         <li>buy the ticket</li>
                         <li>start your adventure</li>
                     </ul>
@@ -137,7 +137,7 @@
                     The moment you face your fear and see there is nothing to be afraid of, is the moment you discover bliss.</p>
                 </div>
             </div>
-            
+
             <h2> Editor example configuration</h2>
             <p>Check out the <a href="https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/predefined-builds.html#installation-example" target="_blank">Quick start</a> 
             guide to learn more about implementing this kind of editor. You will find implementation steps there. You can see this example editor’s code below.</p>
@@ -149,67 +149,223 @@
             </details>
             <div style="border-left: 3px solid #ab47bc; background-color: rgba(171,71,188,.1); position: relative; margin: 1.5em 0; padding: 1.5em;" class="info-box">
                 <p>
-                    Every day, we work hard to keep our documentation complete. Have you spotted outdated information? Is something missing?
+                    Every day, we work hard to keep our documentation complete. Have you spotted outdated information? Is something missing? Please report it via our 
+                    <a href="https://github.com/ckeditor/ckeditor5/issues/new?labels=squad%3Accx%2Ctype%3Adocs&template=7-docs-issue-community.yml&title=Docs+issue+report+from+%22examples%2Fbuilds%2Fclassic-editor.html%22&project-version=36.0.1&user-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F110.0.0.0+Safari%2F537.36&origin-url=https%3A%2F%2Fckeditor.com%2Fdocs%2Fckeditor5%2Flatest%2Fexamples%2Fbuilds%2Fclassic-editor.html">
+                    issue tracker</a>.
                 </p>
             </div>
         </section>
             </div>
 
 
-            <div class="side-navigation" style="flex: 0 0 340px;">
-               <div class="side-navigation-container d-flex position-fixed bg-white" style="height: calc(100% - 100px);">
-                    <nav class="side-navigation-inner overflow-y-auto overflow-x-hidden d-block" style="width: 340px; padding: 1em 0; border-right: 1px solid #f2f5f7;">
-                        <ul class="tree guide-tree user-select-none list-unstyled">
+            <div class="side-navigation mt-4" style="flex: 0 0 340px;">
+               <div class="side-navigation-container d-flex position-fixed bg-white" style="height: calc(100% - 115px);">
+                    <nav class="side-navigation-inner overflow-y-auto overflow-x-hidden" style="width: 340px; border-right: 1px solid #f2f5f7;">
+                        <ul class="tree guide-tree user-select-none list-unstyled ms-1 pb-3">
                             <li>
-                                <div class="tree-item-wrapper">
-                                    <span class="tree-item-folder"></span>
+                                <div id="predefined" class="tree-item-wrapper">
+                                    <span class="tree-item-folder">
+                                        <img class="position-relative me-2" style="height: 0.9em; vertical-align: middle; top: -0.1em;" 
+                                        src="./imgs/folder-icon.svg" alt="guide"> 
+                                        Predefined Builds
+                                    </span>
                                 </div>
-                                <ul class=tree-item-nested-list h-auto overflow-visible">
+                                <ul class="tree-item-nested-list h-auto overflow-visible">
                                     <li>
                                         <a href="#">
                                             <div class="tree-item-wrapper">
-                                                <span>Classic editor</span>
+                                                <span>
+                                                    <img class="position-relative me-2" style="height: 0.9em; vertical-align: middle; top: -0.1em;" 
+                                                    src="./imgs/book-icon.svg" alt="guide"> 
+                                                    Classic editor
+                                                </span>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://ckeditor.com/docs/ckeditor5/latest/examples/builds/inline-editor.html">
                                             <div class="tree-item-wrapper">
-                                                <span>Inline editor</span>
+                                                <span>
+                                                    <img class="position-relative me-2" style="height: 0.9em; vertical-align: middle; top: -0.1em;" 
+                                                    src="./imgs/book-icon.svg" alt="guide"> 
+                                                    Inline editor
+                                                </span>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://ckeditor.com/docs/ckeditor5/latest/examples/builds/balloon-editor.html">
                                             <div class="tree-item-wrapper">
-                                                <span>Baloon editor</span>
+                                                <span>
+                                                    <img class="position-relative me-2" style="height: 0.9em; vertical-align: middle; top: -0.1em;" 
+                                                    src="./imgs/book-icon.svg" alt="guide"> 
+                                                    Baloon editor
+                                                </span>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://ckeditor.com/docs/ckeditor5/latest/examples/builds/balloon-block-editor.html">
                                             <div class="tree-item-wrapper">
-                                                <span>Baloon Block editor</span>
+                                                <span>
+                                                    <img class="position-relative me-2" style="height: 0.9em; vertical-align: middle; top: -0.1em;" 
+                                                    src="./imgs/book-icon.svg" alt="guide"> 
+                                                    Baloon Block editor
+                                                </span>
                                             </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://ckeditor.com/docs/ckeditor5/latest/examples/builds/document-editor.html">
                                             <div class="tree-item-wrapper">
-                                                <span>Document editor</span>
+                                                <span>
+                                                    <img class="position-relative me-2" style="height: 0.9em; vertical-align: middle; top: -0.1em;" 
+                                                    src="./imgs/book-icon.svg" alt="guide"> 
+                                                    Document editor
+                                                </span>
                                             </div>
                                         </a>
                                     </li>
                                 </ul>
                             </li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+
+
+                            <li>
+                                <div id="custom" class="tree-item-wrapper">
+                                    <span class="tree-item-folder">
+                                        <img class="position-relative me-2" style="height: 0.9em; vertical-align: middle; top: -0.1em;" 
+                                        src="./imgs/folder-icon.svg" alt="guide"> 
+                                        Custom Builds
+                                    </span>
+                                </div>
+                                <ul class=tree-item-nested-list h-auto overflow-visible">
+                                    <li>
+                                        <a href="https://ckeditor.com/docs/ckeditor5/latest/examples/builds-custom/full-featured-editor.html">
+                                            <div class="tree-item-wrapper">
+                                                <span>
+                                                    <img class="position-relative me-2" style="height: 0.9em; vertical-align: middle; top: -0.1em;" 
+                                                    src="./imgs/book-icon.svg" alt="guide"> 
+                                                    Full-feature editor
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ckeditor.com/docs/ckeditor5/latest/examples/builds-custom/bottom-toolbar-editor.html">
+                                            <div class="tree-item-wrapper">
+                                                <span>
+                                                    <img class="position-relative me-2" style="height: 0.9em; vertical-align: middle; top: -0.1em;" 
+                                                    src="./imgs/book-icon.svg" alt="guide"> 
+                                                    Bottom toolbar with button grouping
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+
+                            <li>
+                                <div id="framework" class="tree-item-wrapper">
+                                    <span class="tree-item-folder">
+                                        <img class="position-relative me-2" style="height: 0.9em; vertical-align: middle; top: -0.1em;" 
+                                        src="./imgs/folder-icon.svg" alt="guide"> 
+                                        Framework
+                                    </span>
+                                </div>
+                                <ul class=tree-item-nested-list h-auto overflow-visible">
+                                    <li>
+                                        <a href="https://ckeditor.com/docs/ckeditor5/latest/examples/framework/chat-with-mentions.html">
+                                            <div class="tree-item-wrapper">
+                                                <span>
+                                                    <img class="position-relative me-2" style="height: 0.9em; vertical-align: middle; top: -0.1em;" 
+                                                    src="./imgs/book-icon.svg" alt="guide"> 
+                                                    Chat with mentions
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ckeditor.com/docs/ckeditor5/latest/examples/framework/theme-customization.html">
+                                            <div class="tree-item-wrapper">
+                                                <span>
+                                                    <img class="position-relative me-2" style="height: 0.9em; vertical-align: middle; top: -0.1em;" 
+                                                    src="./imgs/book-icon.svg" alt="guide"> 
+                                                    Theme customization
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ckeditor.com/docs/ckeditor5/latest/examples/framework/custom-ui.html">
+                                            <div class="tree-item-wrapper">
+                                                <span>
+                                                    <img class="position-relative me-2" style="height: 0.9em; vertical-align: middle; top: -0.1em;" 
+                                                    src="./imgs/book-icon.svg" alt="guide"> 
+                                                    Custom UI (with Bootstrap)
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ckeditor.com/docs/ckeditor5/latest/examples/framework/multi-root-editor.html">
+                                            <div class="tree-item-wrapper">
+                                                <span>
+                                                    <img class="position-relative me-2" style="height: 0.9em; vertical-align: middle; top: -0.1em;" 
+                                                    src="./imgs/book-icon.svg" alt="guide"> 
+                                                    Multi-root editor 
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ckeditor.com/docs/ckeditor5/latest/examples/framework/data-from-external-source.html">
+                                            <div class="tree-item-wrapper">
+                                                <span>
+                                                    <img class="position-relative me-2" style="height: 0.9em; vertical-align: middle; top: -0.1em;" 
+                                                    src="./imgs/book-icon.svg" alt="guide"> 
+                                                    Data from an external source
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ckeditor.com/docs/ckeditor5/latest/examples/framework/using-react-in-a-widget.html">
+                                            <div class="tree-item-wrapper">
+                                                <span>
+                                                    <img class="position-relative me-2" style="height: 0.9em; vertical-align: middle; top: -0.1em;" 
+                                                    src="./imgs/book-icon.svg" alt="guide"> 
+                                                    React components in an editor
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ckeditor.com/docs/ckeditor5/latest/examples/framework/content-placeholder.html">
+                                            <div class="tree-item-wrapper">
+                                                <span>
+                                                    <img class="position-relative me-2" style="height: 0.9em; vertical-align: middle; top: -0.1em;" 
+                                                    src="./imgs/book-icon.svg" alt="guide"> 
+                                                    Content placeholder
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
                     </nav>
                </div> 
             </div>
         </main>
+
+
+        <footer>
+            <p>
+                © 2003-2023 <a href="http://cksource.com">CKSource</a>.
+                 All rights reserved.
+            </p>
+        </footer>
         <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
         <script src="index.js"></script>
     </body>
