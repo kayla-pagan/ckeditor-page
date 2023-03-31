@@ -6,6 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
         <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+        <!-- Hotjar Tracking Code for my site -->
+        <script defer>
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:3431906,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script>
         <link rel="stylesheet" href="index.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -123,7 +134,7 @@
                     <h3>Improvisation</h3>
                     <p>Life doesn't allow us to execute every single plan perfectly. This especially seems to be the case when you travel. You plan it down to every minute with a big checklist; but when it comes to executing it, 
                     something always comes up and you’re left with your improvising skills. You learn to adapt as you go. Here’s how my travel checklist looks now:</p>
-                    <ul class="ps-4" style="list-style: disc;">
+                    <ul class="ps-4" style="list-style: disc; font-size: 0.9em;">
                         <li>buy the ticket</li>
                         <li>start your adventure</li>
                     </ul>
@@ -139,16 +150,20 @@
             </div>
 
             <h2> Editor example configuration</h2>
-            <p>Check out the <a href="https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/predefined-builds.html#installation-example" target="_blank">Quick start</a> 
+            <p class="mb-4">Check out the <a href="https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/predefined-builds.html#installation-example" target="_blank">Quick start</a> 
             guide to learn more about implementing this kind of editor. You will find implementation steps there. You can see this example editor’s code below.</p>
-            <details>
+            <details open>
                 <summary>View editor configuration script</summary>
+                <div>
+                    <pre></pre>
+                    <div></div>
+                </div>
             </details>
-            <details>
+            <details open>
                 <summary>View editor content listing</summary>
             </details>
-            <div style="border-left: 3px solid #ab47bc; background-color: rgba(171,71,188,.1); position: relative; margin: 1.5em 0; padding: 1.5em;" class="info-box">
-                <p>
+            <div style="border-left: 3px solid #ab47bc; background-color: rgba(171,71,188,.1); position: relative; margin: 1.5em 0; padding: 1.8em 1em;" class="info-box">
+                <p class="mb-0">
                     Every day, we work hard to keep our documentation complete. Have you spotted outdated information? Is something missing? Please report it via our 
                     <a href="https://github.com/ckeditor/ckeditor5/issues/new?labels=squad%3Accx%2Ctype%3Adocs&template=7-docs-issue-community.yml&title=Docs+issue+report+from+%22examples%2Fbuilds%2Fclassic-editor.html%22&project-version=36.0.1&user-agent=Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F110.0.0.0+Safari%2F537.36&origin-url=https%3A%2F%2Fckeditor.com%2Fdocs%2Fckeditor5%2Flatest%2Fexamples%2Fbuilds%2Fclassic-editor.html">
                     issue tracker</a>.
@@ -357,6 +372,22 @@
                     </nav>
                </div> 
             </div>
+
+
+            <!-- <div>
+
+            </div>
+            <div id="feedback-btn" class="feedback-icon position-fixed z-3" style="bottom: 2.5em; right: 1.5em;">   
+                  <svg style="color: #f4364c; width: 50px; height: 50px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-2.625 6c-.54 0-.828.419-.936.634a1.96 1.96 0 00-.189.866c0 .298.059.605.189.866.108.215.395.634.936.634.54 0 .828-.419.936-.634.13-.26.189-.568.189-.866 0-.298-.059-.605-.189-.866-.108-.215-.395-.634-.936-.634zm4.314.634c.108-.215.395-.634.936-.634.54 0 .828.419.936.634.13.26.189.568.189.866 0 .298-.059.605-.189.866-.108.215-.395.634-.936.634-.54 0-.828-.419-.936-.634a1.96 1.96 0 01-.189-.866c0-.298.059-.605.189-.866zm2.023 6.828a.75.75 0 10-1.06-1.06 3.75 3.75 0 01-5.304 0 .75.75 0 00-1.06 1.06 5.25 5.25 0 007.424 0z" clip-rule="evenodd" />
+                  </svg>    
+            </div>
+            <div id="exit-feedback-btn" class="exit-icon position-fixed z-3 d-none" style="bottom: 2.5em; right: 1.5em;">
+                <svg style="color: #f4364c; width: 50px; height: 50px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-1.72 6.97a.75.75 0 10-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 101.06 1.06L12 13.06l1.72 1.72a.75.75 0 101.06-1.06L13.06 12l1.72-1.72a.75.75 0 10-1.06-1.06L12 10.94l-1.72-1.72z" clip-rule="evenodd" />
+                </svg> 
+            </div>              -->
+
         </main>
 
 
@@ -366,6 +397,8 @@
                  All rights reserved.
             </p>
         </footer>
+
+
 
         <div class="search-bar-nav-container position-fixed vh-100 border border-1 border-black d-none" style="width: 63%; right: 0.8em; top: 0.8em; z-index: 3; top: 3.4em;">
             <nav class="search-bar-nav-inner bg-white">

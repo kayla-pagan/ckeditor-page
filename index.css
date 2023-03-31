@@ -90,17 +90,8 @@ ul {
     right: 60px;
   }
   
-  #docsearch_input {
-    border-radius: 6px;
-    min-width: 180px;
-    padding: 6px 25px 6px 6px;
-    font-size: 14px;
-    /* background( #fff image-url("icon-search.svg") no-repeat 100% 50%); */
-  }
-  
-  #docsearch_input:focus {
-    border: 2px solid #5db913;
-    outline: none;
+  .top-search-box:focus {
+    outline: 2px solid #5db913;
     box-shadow: 0 0 5px #5db913;
   }
 
@@ -130,6 +121,7 @@ li .top-menu-github-link:hover {
 
 .header-sub li {
     margin-right: 1em;
+    font-size: 1em;
 }
 
 .main-content-title {
@@ -251,6 +243,7 @@ li .top-menu-github-link:hover {
 
 summary {
     padding-bottom: 10px;
+    font-size: 0.9em;
 }
 
 footer {
