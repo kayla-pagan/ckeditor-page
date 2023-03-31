@@ -152,15 +152,69 @@
             <h2> Editor example configuration</h2>
             <p class="mb-4">Check out the <a href="https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/predefined-builds.html#installation-example" target="_blank">Quick start</a> 
             guide to learn more about implementing this kind of editor. You will find implementation steps there. You can see this example editor’s code below.</p>
-            <details open>
+            <details>
                 <summary>View editor configuration script</summary>
-                <div>
-                    <pre></pre>
-                    <div></div>
+                <div class="code-toolbar position-relative">
+                    <pre class="highlight language-js overflow-hidden" style="background: #2b2c26; color: f8f8f2;" tabindex="0">
+                        <code id="copy-this" class="js language-js" data-prismjs-copy-success="Ready!">
+                            <span class="token keyword">import</span> ClassicEditor <span class="token keyword">from</span> <span class="token string">'@ckeditor/ckeditor5-build-classic/src/ckeditor'</span><span class="token punctuation">;</span>
+
+
+                            ClassicEditor
+
+                                <span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span> <span class="token string">'#snippet-classic-editor'</span> <span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                                    <span class="token literal-property property">toolbar</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                                        <span class="token literal-property property">items</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                                            <span class="token string">'undo'</span><span class="token punctuation">,</span> <span class="token string">'redo'</span><span class="token punctuation">,</span>
+                                            <span class="token string">'|'</span><span class="token punctuation">,</span> <span class="token string">'heading'</span><span class="token punctuation">,</span>
+                                            <span class="token string">'|'</span><span class="token punctuation">,</span> <span class="token string">'bold'</span><span class="token punctuation">,</span> <span class="token string">'italic'</span><span class="token punctuation">,</span>
+                                            <span class="token string">'|'</span><span class="token punctuation">,</span> <span class="token string">'link'</span><span class="token punctuation">,</span> <span class="token string">'uploadImage'</span><span class="token punctuation">,</span> <span class="token string">'insertTable'</span><span class="token punctuation">,</span> <span class="token string">'mediaEmbed'</span><span class="token punctuation">,</span>
+                                            <span class="token string">'|'</span><span class="token punctuation">,</span> <span class="token string">'bulletedList'</span><span class="token punctuation">,</span> <span class="token string">'numberedList'</span><span class="token punctuation">,</span> <span class="token string">'outdent'</span><span class="token punctuation">,</span> <span class="token string">'indent'</span>
+                                        <span class="token punctuation">]</span>
+                                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                                    <span class="token literal-property property">cloudServices</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                                        <span class="token comment">// All predefined builds include the Easy Image feature.</span>
+                                        <span class="token comment">// Provide correct configuration values to use it.</span>
+                                        <span class="token literal-property property">tokenUrl</span><span class="token operator">:</span> <span class="token string">'https://example.com/cs-token-endpoint'</span><span class="token punctuation">,</span>
+                                        <span class="token literal-property property">uploadUrl</span><span class="token operator">:</span> <span class="token string">'https://your-organization-id.cke-cs.com/easyimage/upload/'</span>
+                                        <span class="token comment">// Read more about Easy Image - https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/easy-image.html.</span>
+                                        <span class="token comment">// For other image upload methods see the guide - https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/image-upload.html.</span>
+                                    <span class="token punctuation">}</span>
+                                <span class="token punctuation">}</span> <span class="token punctuation">)</span>
+                                <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span> <span class="token parameter">editor</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                                    window<span class="token punctuation">.</span>editor <span class="token operator">=</span> editor<span class="token punctuation">;</span>
+                                <span class="token punctuation">}</span> <span class="token punctuation">)</span>
+                                <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span> <span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                                    console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span> err <span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                <span class="token punctuation">}</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+                        </code>
+                    </pre>
+                    <div class="toolbar d-flex flex-row flex-nowrap position-absolute" style="top: 0.5em; right: 0.5em;">
+                        <div class="toolbar-item">
+                            <button class="copy-to-clipboard-button d-flex justify-content-center align-items-center overflow-hidden border-0 m-0 p-0 bg-transparent opacity-50" 
+                            style="width: 35px; height: 35px; border-radius: 2px;" data-copy-state="copy" title="Copy the code to the clipboard" type="button"></button>
+                        </div>
+                    </div>
                 </div>
             </details>
-            <details open>
+
+            <details>
                 <summary>View editor content listing</summary>
+                <div class="code-toolbar position-relative">
+                    <pre class="highlight language-html">
+                        <code class="html language-html" data-prismjs-copy-success="Ready!">
+                            <span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>snippet-classic-editor<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                                Editor content is inserted here.
+                            <span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+                        </code>
+                    </pre>
+                    <div class="toolbar d-flex flex-row flex-nowrap position-absolute" style="top: 0.5em; right: 0.5em;">
+                        <div class="toolbar-item">
+                            <button class="copy-to-clipboard-button d-flex justify-content-center align-items-center overflow-hidden border-0 m-0 p-0 bg-transparent opacity-50" 
+                            style="width: 35px; height: 35px; border-radius: 2px;" data-copy-state="copy" title="Copy the code to the clipboard" type="button"></button>
+                        </div>
+                    </div>
+                </div>
             </details>
             <div style="border-left: 3px solid #ab47bc; background-color: rgba(171,71,188,.1); position: relative; margin: 1.5em 0; padding: 1.8em 1em;" class="info-box">
                 <p class="mb-0">
@@ -372,22 +426,6 @@
                     </nav>
                </div> 
             </div>
-
-
-            <!-- <div>
-
-            </div>
-            <div id="feedback-btn" class="feedback-icon position-fixed z-3" style="bottom: 2.5em; right: 1.5em;">   
-                  <svg style="color: #f4364c; width: 50px; height: 50px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                    <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-2.625 6c-.54 0-.828.419-.936.634a1.96 1.96 0 00-.189.866c0 .298.059.605.189.866.108.215.395.634.936.634.54 0 .828-.419.936-.634.13-.26.189-.568.189-.866 0-.298-.059-.605-.189-.866-.108-.215-.395-.634-.936-.634zm4.314.634c.108-.215.395-.634.936-.634.54 0 .828.419.936.634.13.26.189.568.189.866 0 .298-.059.605-.189.866-.108.215-.395.634-.936.634-.54 0-.828-.419-.936-.634a1.96 1.96 0 01-.189-.866c0-.298.059-.605.189-.866zm2.023 6.828a.75.75 0 10-1.06-1.06 3.75 3.75 0 01-5.304 0 .75.75 0 00-1.06 1.06 5.25 5.25 0 007.424 0z" clip-rule="evenodd" />
-                  </svg>    
-            </div>
-            <div id="exit-feedback-btn" class="exit-icon position-fixed z-3 d-none" style="bottom: 2.5em; right: 1.5em;">
-                <svg style="color: #f4364c; width: 50px; height: 50px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                    <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-1.72 6.97a.75.75 0 10-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 101.06 1.06L12 13.06l1.72 1.72a.75.75 0 101.06-1.06L13.06 12l1.72-1.72a.75.75 0 10-1.06-1.06L12 10.94l-1.72-1.72z" clip-rule="evenodd" />
-                </svg> 
-            </div>              -->
-
         </main>
 
 
@@ -400,7 +438,7 @@
 
 
 
-        <div class="search-bar-nav-container position-fixed vh-100 border border-1 border-black d-none" style="width: 63%; right: 0.8em; top: 0.8em; z-index: 3; top: 3.4em;">
+        <!-- <div class="search-bar-nav-container position-fixed vh-100 border border-1 border-black d-none" style="width: 63%; right: 0.8em; top: 0.8em; z-index: 3; top: 3.4em;">
             <nav class="search-bar-nav-inner bg-white">
                 <ul class="list-unstyled">
                     <li>
@@ -431,7 +469,7 @@
                     </li>
                 </ul>
             </nav>
-        </div>
+        </div> -->
         <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
         <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
         <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>

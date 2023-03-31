@@ -145,7 +145,6 @@ li .top-menu-github-link:hover {
 .image {
     display: table;
     margin-top: 0;
-    margin-left: 1.5em;
     clear: both; 
     margin: 1em; 
     min-width: 50px; 
@@ -246,6 +245,111 @@ summary {
     font-size: 0.9em;
 }
 
+code {
+    font-family: Monaco,Menlo,Consolas,"Roboto Mono","Courier New","Ubuntu Mono",monospace;
+}
+
+.highlight code {
+    background: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    position: relative;
+    left: -210px;
+}
+
+:not(pre)>code.highlight[class*=language-], 
+pre.highlight[class*=language-] {
+    background: #272822;
+}
+
+pre.highlight[class*=language-] {
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
+    border-radius: 0.3em;
+}
+
+code.highlight[class*=language-],
+pre.highlight[class*=language-] {
+    color: #f8f8f2;
+    text-shadow: 0 1px rgb(0 0 0 / 30%);
+    font-family: Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
+    font-size: .9em;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.75;
+    tab-size: 4;
+    hyphens: none;
+}
+
+.token.class-name, 
+.token.operator, 
+.token.entity, 
+.token.url, 
+.language-css 
+.token.string, 
+.style .token.string, 
+.token.variable {
+    color: #f8f8f2;
+}
+
+.token.property, 
+.token.attr-name, 
+.token.tag, 
+.token.constant, 
+.token.symbol, 
+.token.deleted, 
+.token.keyword {
+    color: #f92672;
+}
+
+.token.selector, 
+.token.string, 
+.token.char, 
+.token.builtin, 
+.token.inserted, 
+.token.atrule, 
+.token.attr-value {
+    color: #e6db74;
+}
+
+.token.property, 
+.token.attr-name, 
+.token.tag, 
+.token.constant, 
+.token.symbol, 
+.token.deleted, 
+.token.keyword {
+    color: #f92672;
+}
+
+.token.punctuation {
+    color: #f8f8f2;
+}
+
+.token.function {
+    color: #a6e22e;
+}
+
+.token.comment, .token.prolog, .token.doctype, .token.cdata {
+    color: #8292a2;
+}
+
+.toolbar button.copy-to-clipboard-button::before {
+    content: url("imgs/clipboard-icon.svg");
+    margin-left: 2px;
+}
+
+.toolbar button::before {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+}
+
 footer {
     position: relative;
     z-index: 30;
@@ -262,6 +366,10 @@ footer p {
     color: #333;
     bottom: 1.333em;
     right: 1.5em;
+}
+
+._hj-0izHt__MinimizedWidgetBottom__container {
+    bottom: 2.5em;
 }
 
 /* All media queries */
