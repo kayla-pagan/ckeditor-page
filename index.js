@@ -1,15 +1,18 @@
-ClassicEditor
-            .create( document.querySelector( '#editor' ) )
-            .catch( error => {
-                console.error( error )
-            } )
-
 const predefined = document.getElementById('predefined')
 const custom = document.getElementById('custom')
 const framework = document.getElementById('framework')
 const treeItemNestedList = document.querySelectorAll('.tree-item-nested-list')
 const feedbackBtn = document.getElementById('feedback-btn')
+const rwdHeaderBtn = document.getElementById('rwd-header-btn')
+const rwdHeaderMenu = document.getElementById('rwd-header-menu')
+const mainContainer = document.getElementById('main-container')
+const footer = document.getElementsByName("footer")
 
+ClassicEditor
+            .create( document.querySelector( '#editor' ) )
+            .catch( error => {
+                console.error( error )
+            } )
 
 predefined.addEventListener('click', function(){
     treeItemNestedList[0].classList.toggle('d-none')
@@ -32,3 +35,8 @@ const copyContent = async () => {
       console.error('Failed to copy: ', err);
     }
 }
+
+rwdHeaderBtn.addEventListener('click', function(){
+    rwdHeaderMenu.classList.toggle("d-none")
+    document.body.classList.toggle("overflow-hidden")
+})
